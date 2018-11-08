@@ -1,24 +1,24 @@
 # laravel collect
 
 
-## Installation
+## 安装
 
-First, pull in the package through Composer.
+使用 composer 安装：
 
 ```sh
 $ composer require cybercog/laravel-love
 ```
 
-#### Perform Database Migration
+#### 模型迁移
 
-At last you need to publish and run database migrations.
+运行模型迁移命令：
 
 ```sh
 $ php artisan migrate
 ```
 
 
-## Usage
+## 使用方法
 
 ### User Model
 
