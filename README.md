@@ -1,4 +1,22 @@
-laravel-collect
+# laravel collect
+
+
+## Installation
+
+First, pull in the package through Composer.
+
+```sh
+$ composer require cybercog/laravel-love
+```
+
+#### Perform Database Migration
+
+At last you need to publish and run database migrations.
+
+```sh
+$ php artisan migrate
+```
+
 
 ## Usage
 
