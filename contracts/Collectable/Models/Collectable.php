@@ -12,6 +12,11 @@ interface Collectable
     public function getKey();
 
     /**
+     * @return mixed
+     */
+    public function getKeyName();
+
+    /**
      * @return string
      */
     public function getMorphClass();

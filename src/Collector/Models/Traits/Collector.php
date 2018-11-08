@@ -14,7 +14,7 @@ trait Collector
      */
     public function collections()
     {
-        return $this->hasMany(app(CollectionContract::class), $this->getKey(), 'user_id');
+        return $this->hasMany(app(CollectionContract::class), 'user_id', $this->getKeyName());
     }
 
     /**

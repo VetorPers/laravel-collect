@@ -2,6 +2,7 @@
 
 namespace Vetor\Laravel\Collect\Collectable\Models\Traits;
 
+use DB;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Query\JoinClause;
 use Vetor\Contracts\Collect\Collection\Models\Collection as CollectionContract;
@@ -38,7 +39,7 @@ trait Collectable
      */
     public function getCollectionsCountAttribute()
     {
-        return $this->collections ? $this->collections->count : 0;
+        return $this->collections ? $this->collections->count() : 0;
     }
 
     /**
@@ -51,12 +52,14 @@ trait Collectable
         $collectable = $query->getModel();
 
         return $query
-            ->select('count(*) as collectors_count')
+            ->select("{$collectable->getTable()}.*")
             ->leftJoin('collections', function (JoinClause $join) use ($collectable) {
                 $join
                     ->on('collections.collectable_id', '=', "{$collectable->getTable()}.{$collectable->getKeyName()}")
                     ->where('collections.collectable_type', '=', $collectable->getMorphClass());
             })
-            ->orderBy('collectors_count', $direction);
+            ->groupBy("{$collectable->getTable()}.{$collectable->getKeyName()}")
+            ->orderBy(DB::raw("count(collections.id)"), $direction)
+            ->orderBy("{$collectable->getTable()}.{$collectable->getKeyName()}");
     }
 }
