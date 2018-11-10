@@ -27,6 +27,9 @@
       "Vetor\\Tests\\Collect\\": "tests/"
     }
   },
+  "scripts": {
+    "test": "vendor/bin/phpunit"
+  },
   "extra": {
     "laravel": {
       "providers": [
