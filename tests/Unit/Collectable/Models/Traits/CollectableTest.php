@@ -2,9 +2,9 @@
 
 namespace Vetor\Tests\Collect\Unit\Collectable\Models\Traits;
 
-use Vetor\Tests\Collect\TestCase;
+use PHPUnit\Framework\TestCase;
 
-class CollectableTest extends \PHPUnit\Framework\TestCase
+class CollectableTest extends TestCase
 {
     /** @test */
     public function test()
