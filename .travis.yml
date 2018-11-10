@@ -11,4 +11,4 @@ install:
 
 before_script:
     - travis_retry composer self-update
-    - travis_retry composer update --no-interaction --prefer-dist
+    - travis_retry composer update
