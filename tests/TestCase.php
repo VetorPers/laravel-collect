@@ -2,7 +2,6 @@
 
 namespace Vetor\Tests\Collect;
 
-
 class TestCase
 {
 
