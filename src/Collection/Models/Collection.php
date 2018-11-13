@@ -6,7 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Vetor\Contracts\Collect\Collection\Models\Collection as CollectionContract;
-use Vetor\Contracts\Collect\Collectable\Models\Collectable as CollectableContract;
 
 class Collection extends Model implements CollectionContract
 {

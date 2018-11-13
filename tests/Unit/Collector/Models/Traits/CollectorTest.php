@@ -1,12 +1,12 @@
 <?php
 
-namespace Vetor\Tests\Collect\Unit\Collectable\Models\Traits;
+namespace Vetor\Tests\Collect\Unit\Collector\Models\Traits;
 
 use Vetor\Tests\Collect\TestCase;
 use Vetor\Tests\Collect\Stubs\Models\User;
 use Vetor\Tests\Collect\Stubs\Models\Article;
 
-class CollectableTest extends TestCase
+class CollectorTest extends TestCase
 {
     /** @test */
     public function it_can_collect_collectable()
@@ -14,7 +14,7 @@ class CollectableTest extends TestCase
         $article = factory(Article::class)->create();
         $user = factory(User::class)->create();
 
-        $article->collect($user);
+        $user->collect($article);
 
         $this->assertDatabaseHas('collections', [
             'user_id'          => $user->id,
@@ -29,8 +29,8 @@ class CollectableTest extends TestCase
         $article = factory(Article::class)->create();
         $user = factory(User::class)->create();
 
-        $article->collect($user);
-        $article->cancelCollect($user);
+        $user->collect($article);
+        $user->cancelCollect($article);
 
         $this->assertSoftDeleted('collections', [
             'user_id'          => $user->id,

@@ -2,7 +2,6 @@
 
 namespace Vetor\Laravel\Collect\Collector\Models\Traits;
 
-use Illuminate\Database\Eloquent\Builder;
 use Vetor\Contracts\Collect\Collection\Models\Collection as CollectionContract;
 use Vetor\Contracts\Collect\Collectable\Models\Collectable as CollectableContract;
 use Vetor\Contracts\Collect\Collectable\Services\CollectableService as CollectableServiceContract;

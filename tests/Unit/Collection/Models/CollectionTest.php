@@ -2,7 +2,7 @@
 
 namespace Vetor\Tests\Collect\Unit\Collection\Models;
 
-use PHPUnit\Framework\TestCase;
+use Vetor\Tests\Collect\TestCase;
 use Vetor\Laravel\Collect\Collection\Models\Collection;
 
 class CollectionTest extends TestCase
