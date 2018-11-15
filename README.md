@@ -16,7 +16,7 @@
 使用 composer 安装：
 
 ```sh
-$ composer require cybercog/laravel-love
+$ composer require vetor/laravel-collect
 ```
 
 #### 模型迁移
