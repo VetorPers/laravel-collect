@@ -10,7 +10,6 @@
 [![License](https://poser.pugx.org/vetor/laravel-collect/license)](https://packagist.org/packages/vetor/laravel-collect)
 </p>
 
-
 # laravel collect
 
 
