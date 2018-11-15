@@ -1,4 +1,4 @@
-<p align="center">
+<center>
 [![Build Status](https://travis-ci.org/VetorPers/laravel-collect.svg?branch=master)](https://travis-ci.org/VetorPers/laravel-collect)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/VetorPers/laravel-collect/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/VetorPers/laravel-collect/?branch=master)
 [![Code Coverage](https://scrutinizer-ci.com/g/VetorPers/laravel-collect/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/VetorPers/laravel-collect/?branch=master)
@@ -8,7 +8,7 @@
 [![Total Downloads](https://poser.pugx.org/vetor/laravel-collect/downloads)](https://packagist.org/packages/vetor/laravel-collect)
 [![Latest Unstable Version](https://poser.pugx.org/vetor/laravel-collect/v/unstable)](https://packagist.org/packages/vetor/laravel-collect)
 [![License](https://poser.pugx.org/vetor/laravel-collect/license)](https://packagist.org/packages/vetor/laravel-collect)
-</p>
+<center>
 
 # laravel collect
 
