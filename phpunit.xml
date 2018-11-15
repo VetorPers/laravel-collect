@@ -24,4 +24,13 @@
         <env name="DB_CONNECTION" value="sqlite"/>
         <env name="DB_DATABASE" value=":memory:"/>
     </php>
+    <filter>
+        <whitelist>
+            <directory suffix=".php">src/</directory>
+            <exclude>
+                <directory>src/Providers</directory>
+                <directory>src/Collectable/Services</directory>
+            </exclude>
+        </whitelist>
+    </filter>
 </phpunit>
