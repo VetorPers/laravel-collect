@@ -18,13 +18,11 @@ class CollectableService implements CollectableServiceContract
     {
         $userId = $this->getCollectorUserId($userId);
 
-        $collection = $collectable->collections()->where('user_id', $userId)->first();
+        $collection = $collectable->collections()->where('user_id', $userId)->withTrashed()->first();
 
-        if ( !$collection) {
-            $collectable->collections()->create([
-                'user_id' => $userId,
-            ]);
-        }
+        $collection ? $collection->restore() : $collectable->collections()->create([
+            'user_id' => $userId,
+        ]);
 
         return;
     }
