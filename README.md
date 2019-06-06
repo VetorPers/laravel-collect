@@ -63,6 +63,10 @@ class Article extends Model implements CollectableContract
 
 $user->collect($article);
 
+// 是否收藏
+
+$user->isCollectThis($article);
+
 // 取消收藏
 
 $user->cancelCollect($article);
@@ -80,6 +84,10 @@ $user->collectionsWhereCollectable(Article::class);
 // 收藏
 
 $article->collect();
+
+// 是否收藏
+
+$article->isCollection();
 
 // 取消收藏
 

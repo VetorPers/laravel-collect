@@ -30,6 +30,18 @@ class CollectableService implements CollectableServiceContract
     /**
      * @param \Vetor\Contracts\Collect\Collectable\Models\Collectable $collectable
      * @param $userId
+     * @return bool
+     */
+    public function isCollection(CollectableContract $collectable, $userId)
+    {
+        $userId = $this->getCollectorUserId($userId);
+
+        return $collectable->collections()->where('user_id', $userId)->first() ? true : false;
+    }
+
+    /**
+     * @param \Vetor\Contracts\Collect\Collectable\Models\Collectable $collectable
+     * @param $userId
      * @return mixed|void
      */
     public function removeCollectionFrom(CollectableContract $collectable, $userId)

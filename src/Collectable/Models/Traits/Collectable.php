@@ -23,7 +23,15 @@ trait Collectable
      */
     public function collect($userId = null)
     {
-        app(CollectableServiceContract::class)->addCollectionTo($this, $userId);
+        return app(CollectableServiceContract::class)->addCollectionTo($this, $userId);
+    }
+
+    /**
+     * @param null $userId
+     */
+    public function isCollection($userId = null)
+    {
+        return app(CollectableServiceContract::class)->isCollection($this, $userId);
     }
 
     /**
@@ -31,7 +39,7 @@ trait Collectable
      */
     public function cancelCollect($userId = null)
     {
-        app(CollectableServiceContract::class)->removeCollectionFrom($this, $userId);
+        return app(CollectableServiceContract::class)->removeCollectionFrom($this, $userId);
     }
 
     /**
